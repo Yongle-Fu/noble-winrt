@@ -8,7 +8,7 @@ install:
   - ps: node -v
   - ps: npm -v
   - ps: yarn -v
-  - ps: yarn global add node-gyp --loglevel=error
+  - ps: npm --loglevel=error i -g node-gyp
   - ps: node-gyp -v
   - cmd: yarn install --frozen-lockfile
   - cmd: yarn build:source
