@@ -2,11 +2,10 @@
 image: Visual Studio 2017
 
 platform:
-- x86
 - x64
 
 install:
-  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild "8.12.0") $env:platform;
+  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild "12.16.0") $env:platform;
   - ps: |
         npm install -g node-gyp 2>&1 | out-null
         if ($LASTEXITCODE -NE 0) { throw "Failed installing node-gyp"; }
@@ -26,7 +25,7 @@ build_script:
   - ps: |
       if ($publish_binary -Eq "1") {
         yarn global add prebuild 2>&1 | write-host
-        prebuild 10.15.3 -t 11.15.0 -t 12.16.0 -r node --upload $env:prebuild_upload 2>&1 | write-host
-        prebuild -t 5.0.10 -t 6.0.0 -r electron --upload $env:prebuild_upload 2>&1 | write-host
+        prebuild -t 12.16.0 -r node --upload $env:prebuild_upload 2>&1 | write-host
+        prebuild -t 5.0.10 -r electron --upload $env:prebuild_upload 2>&1 | write-host
       }
       echo "done."
