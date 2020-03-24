@@ -10,8 +10,8 @@
   "main": "index.js",
   "gypfile": true,
   "engines": {
-    "node": ">=10.5.3",
-    "npm": ">=6.9.0"
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "napi-thread-safe-callback": "0.0.6",
