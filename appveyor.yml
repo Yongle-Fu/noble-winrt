@@ -24,6 +24,7 @@ build_script:
   - ps: |
       if ($publish_binary -Eq "1") {
         npm --loglevel=error i -g prebuild 2>&1 | write-host
-        prebuild --all --upload $env:prebuild_upload 2>&1 | write-host
+        prebuild -t 12.16.0 -r node --upload $env:prebuild_upload 2>&1 | write-host
+        prebuild -t 5.0.10 -r electron --upload $env:prebuild_upload 2>&1 | write-host
       }
       echo "done."
