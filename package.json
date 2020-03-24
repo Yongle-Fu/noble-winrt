@@ -5,7 +5,7 @@
   "author": "gv@timeular.com",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Timeular/noble-winrt.git"
+    "url": "https://github.com/kuyoonjo/noble-winrt.git"
   },
   "main": "index.js",
   "gypfile": true,

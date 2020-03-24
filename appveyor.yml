@@ -5,6 +5,7 @@ platform:
 - x64
 
 install:
+  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild "12.16.0") $env:platform;
   - ps: |
         npm --loglevel=error i -g node-gyp 2>&1 | out-null
         if ($LASTEXITCODE -NE 0) { throw "Failed installing node-gyp"; }
