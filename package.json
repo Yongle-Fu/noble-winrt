@@ -21,9 +21,7 @@
     "run-script-os": "^1.1.1"
   },
   "scripts": {
-    "install": "run-script-os",
-    "install:windows": "npx prebuild-install --force || npx node-gyp rebuild",
-    "install:nix": "echo skip",
+    "install": "prebuild-install --force || echo skip",
     "ci": "node --napi-modules ./test/ci_test.js",
     "test:bindings": "node --napi-modules ./test/test_binding.js",
     "test:battery": "node --napi-modules ./test/test_battery.js",
