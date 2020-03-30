@@ -8,13 +8,13 @@ if (os.platform() === 'win32') {
 	if (!(ver[0] > 10 ||
 		(ver[0] === 10 && ver[1] > 0) ||
 		(ver[0] === 10 && ver[1] === 0 && ver[2] >= 15063))) {
-		module.exports = require('noble-unix');
+		module.exports = require('@kuyoonjo/noble-unix');
 	} else {
-		const Noble = require('noble-unix/lib/noble');
+		const Noble = require('@kuyoonjo/noble-unix/lib/noble');
 		const winrtBindings = require('./lib/binding.js');
 		var nobleInstance = new Noble(winrtBindings);
 		module.exports = nobleInstance;
 	}
 } else {
-	module.exports = require('noble-unix');
+	module.exports = require('@kuyoonjo/noble-unix');
 }
