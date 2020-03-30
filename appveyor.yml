@@ -15,17 +15,12 @@ install:
   - cmd: npm --loglevel=error i
   - cmd: npm run build:source
   - cmd: npm run ci
-  - ps: $publish_binary = 0
-  - ps: if ($env:appveyor_repo_tag -match "true") { $publish_binary=1; }
   - ps: echo "tag $env:appveyor_repo_tag_name branch $env:APPVEYOR_REPO_BRANCH"
 build_script:
-  - ps: echo "publish $publish_binary"
   - ps: $arch = $env:platform
   - ps: if ($arch -match "x86") { $arch="ia32"; }
   - ps: |
-      if ($publish_binary -Eq "1") {
-        npm --loglevel=error i -g prebuild 2>&1 | write-host
-        prebuild -t 12.16.0 -r node --upload $env:prebuild_upload 2>&1 | write-host
-        prebuild -t 5.0.10 -r electron --upload $env:prebuild_upload 2>&1 | write-host
-      }
+      npm --loglevel=error i -g prebuild 2>&1 | write-host
+      prebuild -t 12.16.0 -r node --upload $env:prebuild_upload 2>&1 | write-host
+      prebuild -t 5.0.10 -r electron --upload $env:prebuild_upload 2>&1 | write-host
       echo "done."
