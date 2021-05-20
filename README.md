@@ -1,9 +1,7 @@
 # Noble (Node.js Bluetooth LE) for Windows 10
 
-_This is a rewrite of [noble-uwp](https://github.com/jasongin/noble-uwp) using the [C++/WinRT](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API._
-
 ## System Requirements
- * Node.js v6.14.2 or later.
+ * Node.js v12.0.0 or later.
  * Windows 10 build 10.0.15063 or later
  * Windows 10 SDK build 10.0.17134.0
 
