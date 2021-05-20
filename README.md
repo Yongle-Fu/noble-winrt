@@ -1,7 +1,7 @@
 # Noble (Node.js Bluetooth LE) for Windows 10
 
 ## System Requirements
- * Node.js v12.0.0 or later.
+ * Node.js v8.12.0 or later.
  * Windows 10 build 10.0.15063 or later
  * Windows 10 SDK build 10.0.17134.0
 

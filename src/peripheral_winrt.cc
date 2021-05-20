@@ -38,6 +38,8 @@ void PeripheralWinrt::Update(const int rssiValue, const BluetoothLEAdvertisement
     if (!localName.empty())
     {
         name = localName;
+    } else {
+        name = "UNKNOWN " + address;
     }
 
     connectable = advertismentType == BluetoothLEAdvertisementType::ConnectableUndirected ||

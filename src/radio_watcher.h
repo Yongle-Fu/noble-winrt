@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <functional>
+// #include <functional>
 #include <set>
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Devices.Radios.h>
