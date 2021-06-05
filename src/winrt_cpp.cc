@@ -51,7 +51,6 @@ std::string toStr(winrt::guid uuid)
     {
     }
 
-    // taken from winrt/base.h
     char buffer[38];
     // 00000000-0000-0000-0000-000000000000
     sprintf_s(buffer, "%08x-%04hx-%04hx-%02hhx%02hhx-%02hhx%02hhx%02hhx%02hhx%02hhx%02hhx",

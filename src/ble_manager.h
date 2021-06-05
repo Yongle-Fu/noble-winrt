@@ -7,8 +7,9 @@
 
 #pragma once
 
-#include <winrt/Windows.Devices.Bluetooth.Advertisement.h>
-#include <winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h>
+#include "winrt/Windows.Foundation.h"
+#include "winrt/Windows.Devices.Bluetooth.Advertisement.h"
+#include "winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h"
 
 #include "callbacks.h"
 #include "peripheral_winrt.h"

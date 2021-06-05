@@ -8,8 +8,9 @@ if (os.platform() === 'win32') {
 	if (!(ver[0] > 10 ||
 		(ver[0] === 10 && ver[1] > 0) ||
 		(ver[0] === 10 && ver[1] === 0 && ver[2] >= 15063))) {
-		module.exports = require('@abandonware/noble')
+		module.exports = require('@abandonware/noble');
 	} else {
+		//noble-winrt for Windows 10 build 10.0.15063 or later
 		const Noble = require('@abandonware/noble/lib/noble');
 		const winrtBindings = require('./lib/binding.js');
 		var nobleInstance = new Noble(winrtBindings);

@@ -6,6 +6,12 @@
 //
 
 #include "notify_map.h"
+#include "winrt/base.h"
+namespace winrt::impl
+{
+    template <typename Async>
+    auto wait_for(Async const& async, Windows::Foundation::TimeSpan const& timeout);
+}
 
 bool Key::operator==(const Key& other) const
 {
@@ -35,7 +41,7 @@ bool NotifyMap::IsSubscribed(std::string uuid, GattCharacteristic characteristic
 void NotifyMap::Unsubscribe(std::string uuid, GattCharacteristic characteristic)
 {
     Key key = { uuid, characteristic.Service().Uuid(), characteristic.Uuid() };
-    auto& it = mNotifyMap.find(key);
+    const auto& it = mNotifyMap.find(key);
     if (it == mNotifyMap.end())
     {
         return;

@@ -8,7 +8,6 @@
 #pragma once
 
 #include <winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h>
-#include "winrt_guid.h"
 
 using namespace winrt::Windows::Devices::Bluetooth::GenericAttributeProfile;
 

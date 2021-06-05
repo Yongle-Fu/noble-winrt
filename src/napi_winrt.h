@@ -1,7 +1,7 @@
 #pragma once
 
 #include <napi.h>
-#include "winrt/base.h"
+#include "winrt/Windows.Foundation.h"
 #include "peripheral.h"
 
 std::vector<winrt::guid> getUuidArray(const Napi::Value& value);

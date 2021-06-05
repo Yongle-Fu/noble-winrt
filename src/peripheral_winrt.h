@@ -17,13 +17,13 @@ using winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceSer
 #include <optional>
 
 #include "peripheral.h"
-#include "winrt_guid.h"
+// #include "winrt_guid.h"
 
 class CachedCharacteristic
 {
 public:
     CachedCharacteristic() = default;
-    CachedCharacteristic(GattCharacteristic& c) : characteristic(c)
+    CachedCharacteristic(GattCharacteristic c) : characteristic(c)
     {
     }
 
@@ -35,7 +35,7 @@ class CachedService
 {
 public:
     CachedService() = default;
-    CachedService(GattDeviceService& s) : service(s)
+    CachedService(GattDeviceService s) : service(s)
     {
     }
 
